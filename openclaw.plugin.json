@@ -1,0 +1,24 @@
+{
+  "id": "hello-world-plugin",
+  "name": "Hello World",
+  "description": "A simple hello world Orbit plugin for testing",
+  "orbit": {
+    "billing": true
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": ["hello_world_greet"]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "privateKey": {
+        "type": "string",
+        "description": "Wallet private key for Orbit billing (0x + 64 hex chars)"
+      }
+    }
+  }
+}
